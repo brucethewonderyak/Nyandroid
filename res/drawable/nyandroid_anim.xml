@@ -28,5 +28,7 @@
     <item android:drawable="@drawable/nyandroid09" android:duration="160" />
     <item android:drawable="@drawable/nyandroid10" android:duration="160" />
     <item android:drawable="@drawable/nyandroid11" android:duration="160" />
+    <item android:drawable="@drawable/nyandroid12" android:duration="160" />
+    <item android:drawable="@drawable/nyandroid13" android:duration="160" />    
 </animation-list>
 

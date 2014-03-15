@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.alexbrofsky.nyandroid"
+      android:versionCode="4"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="17" 
+              android:targetSdkVersion="17"/>
+    
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    
+    <application android:icon="@drawable/bruce" android:label="@string/app_name">
+        <!-- Nyandroid and Dream -->
+        <activity android:name=".Nyandroid"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+                  android:hardwareAccelerated="true"
+                  android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".NyandroidDream"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <!-- DessertCase and Dream -->
+        <activity android:name=".DessertCase"
+                  android:label="@string/dessert_case"
+                  android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+                  android:hardwareAccelerated="true"
+                  android:launchMode="singleInstance"
+                  android:icon="@drawable/dessert_kitkat"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".DessertCaseDream"
+            android:exported="true"
+            android:label="@string/dessert_case"
+            android:icon="@drawable/dessert_kitkat">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <!-- BeanBag/BeanFlinger and Dream-->
+        <activity
+            android:name=".BeanBag"
+            android:exported="true"
+            android:label="@string/jelly_bean_dream_name"
+            android:icon="@drawable/redbeandroid"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".BeanBagDream"
+            android:exported="true"
+            android:label="@string/jelly_bean_dream_name"
+            android:icon="@drawable/redbeandroid">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <!-- RocketLauncher -->
+        <activity android:name=".RocketLauncher"
+                  android:label="@string/rocket_launcher"
+                  android:hardwareAccelerated="true"
+                  android:launchMode="singleInstance"
+                  android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".RocketLauncherDream"
+            android:exported="true"
+            android:label="@string/rocket_launcher"
+            >
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest> 
